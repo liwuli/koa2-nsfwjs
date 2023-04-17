@@ -11,7 +11,6 @@ const fs = require('fs');
 const path = require('path');
 var https = require("https");
 
-
 // SSL options
 var options = {
   key: fs.readFileSync(path.join(__dirname, './ssl/9724696_nsfw.liwulin.top.key')),
@@ -22,7 +21,7 @@ var options = {
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '443');
+var port = normalizePort(process.env.PORT || '3000');
 // app.set('port', port);
 
 /**
