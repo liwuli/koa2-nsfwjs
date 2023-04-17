@@ -96,11 +96,8 @@ const load_model = async () => {
   // mobilenetv2: ['/quant_nsfw_mobilenet/'],
   // mobilenetMid: ['/quant_mid/', { type: 'graph' }],
   // inceptionv3: ['/model/', { size: 299 }],
-  // 获取当前路径
-  // const currentPath = path.resolve(__dirname,'..');
   const modelPath = 'file://models/quant_mid/model.json';
   _model = await nsfwjs.load(modelPath,{ type: 'graph'})
-  // _model = await nsfwjs.load(`file://${currentPath}\\models\\quant_mid\\model.json`,{ type: 'graph' })
 }
 
 load_model();
