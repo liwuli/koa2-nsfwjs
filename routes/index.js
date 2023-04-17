@@ -98,7 +98,7 @@ const load_model = async () => {
   // inceptionv3: ['/model/', { size: 299 }],
   // 获取当前路径
   // const currentPath = path.resolve(__dirname,'..');
-  _model = await nsfwjs.load(`http://localhost:3000/models/quant_mid/model.json`,{ type: 'graph' })
+  _model = await nsfwjs.load(`http://localhost/models/quant_mid/model.json`,{ type: 'graph' })
 }
 
 load_model();
