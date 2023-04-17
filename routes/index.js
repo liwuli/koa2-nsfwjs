@@ -101,6 +101,5 @@ const load_model = async () => {
 }
 
 load_model();
-
 module.exports = router
 
