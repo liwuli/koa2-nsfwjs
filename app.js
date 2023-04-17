@@ -6,8 +6,7 @@ const onerror = require('koa-onerror')
 // const bodyparser = require('koa-bodyparser')
 const {koaBody} = require('koa-body');
 const logger = require('koa-logger')
-// const cors = require('koa2-cors');
-// const sslify = require('koa-sslify').default;
+
 
 const index = require('./routes/index')
 const users = require('./routes/users')
@@ -18,16 +17,6 @@ onerror(app)
 // middlewares
 // app.use(bodyparser({
 //   enableTypes:['json', 'form', 'text']
-// }))
-
-// // 使用 ssl
-// app.use(sslify());
-
-// // 跨域设置
-// app.use(cors({
-//   origin: function (ctx) {
-//     return ctx.header.origin;
-//   }
 // }))
 
 app.use(koaBody({
