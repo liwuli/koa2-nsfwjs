@@ -2182,6 +2182,11 @@ koa-send@^5.0.0:
     http-errors "^1.7.3"
     resolve-path "^1.4.0"
 
+koa-sslify@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmmirror.com/koa-sslify/-/koa-sslify-5.0.1.tgz#b94ffead65a3e239a0324ff7516cb0fde996a1e1"
+  integrity sha512-QwQgMvNPyePpngghYZxeuPzeQqMOFYUXiKu8pd4wz9rd7ZmoOq4VKtoEIjctLt3Qcfv2aHL/0UIRAmIK4qDczg==
+
 koa-static@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmmirror.com/koa-static/-/koa-static-5.0.0.tgz#5e92fc96b537ad5219f425319c95b64772776943"
@@ -2201,6 +2206,11 @@ koa-views@^6.2.0:
     koa-send "^5.0.0"
     mz "^2.4.0"
     pretty "^2.0.0"
+
+koa2-cors@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.npmmirror.com/koa2-cors/-/koa2-cors-2.0.6.tgz#9ad23df3a0b9bb84530b46f5944f3fb576086554"
+  integrity sha512-JRCcSM4lamM+8kvKGDKlesYk2ASrmSTczDtGUnIadqMgnHU4Ct5Gw7Bxt3w3m6d6dy3WN0PU4oMP43HbddDEWg==
 
 koa@^2.7.0:
   version "2.14.1"
