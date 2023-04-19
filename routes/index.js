@@ -31,9 +31,11 @@ router.post('/nsfw', async (ctx, next) => {
     if (fileData) {
       if(ext === '.png' || ext === '.jpeg' || ext === '.jpg'){
         // 文件对象buff转换成张量
-        const image = await tf.node.decodeImage(fileData,3);    
+        const image = await tf.node.decodeImage(fileData,3);   
         // 执行预测
         const predictions = await _model.classify(image)
+        delete fileData;
+        delete image;
         ctx.body = {
           predictions: predictions
         };
@@ -55,6 +57,8 @@ router.post('/nsfw', async (ctx, next) => {
               const image =  await tf.node.decodeImage(jpgStream._obj,3);     
               //执行预测 
               const predictions = await _model.classify(image);
+              delete jpgStream;
+              delete image;
               // 返回结果
               resolve(predictions);
             } catch (error) {
