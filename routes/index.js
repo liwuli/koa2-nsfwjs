@@ -36,6 +36,7 @@ router.post('/nsfw', async (ctx, next) => {
         const predictions = await _model.classify(image)
         delete fileData;
         delete image;
+        debugger
         ctx.body = {
           predictions: predictions
         };
@@ -104,6 +105,6 @@ const load_model = async () => {
   _model = await nsfwjs.load(modelPath)
 }
 
-// load_model();
+load_model();
 module.exports = router
 
