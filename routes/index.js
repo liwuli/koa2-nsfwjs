@@ -22,32 +22,6 @@ router.get('/', async (ctx, next) => {
 
 // 定义鉴黄路由
 router.post('/nsfw', async (ctx, next) => {
-
-  ctx.body = {
-    "predictions": [
-        {
-            "className": "Neutral",
-            "probability": 0.9995803236961365
-        },
-        {
-            "className": "Porn",
-            "probability": 0.0003705499111674726
-        },
-        {
-            "className": "Drawing",
-            "probability": 0.00002809570469253231
-        },
-        {
-            "className": "Hentai",
-            "probability": 0.00001101378529710928
-        },
-        {
-            "className": "Sexy",
-            "probability": 0.000010001232112699654
-        }
-    ]
-}
-return;
   try {
     // 获取图片数据
     const fileData = await fs.promises.readFile(ctx.request.files.imageData.filepath);
@@ -62,7 +36,6 @@ return;
         const predictions = await _model.classify(image)
         delete fileData;
         delete image;
-        debugger
         ctx.body = {
           predictions: predictions
         };
